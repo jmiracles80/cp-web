@@ -11,4 +11,4 @@ module.exports = function alreadyInUse (err) {
   if(err.invalidAttributes.username) {
     return res.send(409, 'Username is already taken, please choose a different username');
   }
-}
+};

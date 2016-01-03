@@ -11,49 +11,34 @@
 
 module.exports.bootstrap = function(cb) {
 
-  // // Return the number of records in the video model
-  // Video.count().exec(function(err, numVideos) {
-  //   if (err) {
-  //     return cb(err);
-  //   }
+//CREATES admin user for testing
+  function createTestUsers() {
 
-  //   // If there's at least one log the number to the console.
-  //   if (numVideos > 0) {
-  //     console.log('Existing video records: ', numVideos)
-  //     return cb();
-  //   }
+    var bcrypt = require('bcryptjs');
 
-  //   // Add machinepack-youtube as a depedency
-  //   var Youtube = require('machinepack-youtube');
+      var hash = bcrypt.hashSync('abc123', 10);
 
-  //   // List Youtube videos which match the specified search query.
-  //   Youtube.searchVideos({
-  //     query: 'grumpy cat',
-  //     apiKey: 'ADD YOUR OWN GOOGLE API KEY HERE',
-  //     limit: 15,
-  //   }).exec({
-  //     // An unexpected error occurred.
-  //     error: function(err) {
+      var options = {};
 
-  //     },
-  //     // OK.
-  //     success: function(foundVideos) {
-  //       _.each(foundVideos, function(video) {
-  //         video.src = 'https://www.youtube.com/embed/' + video.id;
-  //         delete video.description;
-  //         delete video.publishedAt;
-  //         delete video.id;
-  //         delete video.url;
-  //       });
 
-  //       Video.create(foundVideos).exec(function(err, videoRecordsCreated) {
-  //         if (err) {
-  //           return cb(err);
-  //         }
-  //         console.log(foundVideos);
-          return cb();
-  //       });
-  //     },
-  //   });
-  // });
+          options.email = 'james@email.com';
+          options.encryptedPassword = hash;
+          options.username = 'james';
+          options.deleted = false;
+          options.admin = true;
+          options.banned = false;
+
+          User.create(options).exec(function(err, createdUser) {
+            if (err) {
+              return cb(err);
+            }
+            console.log(createdUser);
+
+            return cb();
+          });
+
+
+}
+          return createTestUsers();
+
 };

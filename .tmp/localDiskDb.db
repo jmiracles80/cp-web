@@ -11,15 +11,15 @@
     ],
     "user": [
       {
-        "email": "james.e.myrick@gmail.com",
-        "encryptedPassword": "$2a$10$N05iIlJMc7e7IloiOu2L9uOfL1OnoWswBKlS7MNScJ4awJgxutVK6",
-        "username": "james.e.myrick@gmail.com",
+        "email": "james@email.com",
+        "encryptedPassword": "$2a$10$1debh7eLyA7J6.JjPC/SFu9iwH22qz6rSW.PoBiI1PbmHwmnOK6PG",
+        "username": "james",
         "deleted": false,
-        "admin": false,
+        "admin": true,
         "banned": false,
-        "createdAt": "2016-01-03T18:54:22.826Z",
-        "updatedAt": "2016-01-03T18:54:22.826Z",
-        "id": 25
+        "createdAt": "2016-01-03T21:16:37.393Z",
+        "updatedAt": "2016-01-03T21:16:37.393Z",
+        "id": 34
       }
     ]
   },
@@ -75,7 +75,7 @@
   },
   "counters": {
     "user": {
-      "id": 25
+      "id": 34
     },
     "video": {
       "id": 1

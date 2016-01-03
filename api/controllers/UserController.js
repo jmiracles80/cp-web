@@ -73,7 +73,8 @@ module.exports = {
 			}
 		});
 
-	},
+	},//end signup
+
 	profile: function(req,res) {
 
 		User.findOne(req.param('id')).exec(function foundUser(err,user) {
@@ -81,7 +82,7 @@ module.exports = {
 			if(err) return res.negotiate(err);
 
 			console.log(user);
-			
+
 			//Handle not finding User
 			if(!user) return res.notFound();
 
@@ -90,5 +91,96 @@ module.exports = {
 
 		});
 
-	}
-};
+	},//end profile
+
+	delete: function(req, res) {
+		if (!req.param('id')){
+			return res.badRequest('id is a required parameter.');
+		}
+
+		User.destroy({
+			id: req.param('id')
+		}).exec(function (err, usersDestroyed){
+			if (err) return res.negotiate(err);
+
+			if (usersDestroyed.length === 0) {
+				return res.notFound();
+			}
+				return res.ok();
+		});
+
+	},//end delete
+	removeProfile: function(req, res) {
+		if (!req.param('id')){
+			return res.badRequest('id is a required parameter.');
+		}
+		User.update({id: req.param('id') },
+		{
+			deleted: true
+		}, function(err, removedUser){
+			if (err) return res.negotiate(err);
+			if (removedUser.length === 0) {
+				return res.notFound();
+			}
+			return res.ok();
+		});
+	},//end removeprofile
+
+	restoreProfile: function(req, res) {
+		User.findOne({
+			email: req.param('email')
+
+		}, function foundUser(err, user) {
+			if (err) return res.negotiate(err);
+			if (!user) return res.notFound();
+
+			//Passwords.checkPassword({
+
+				// passwordAttempt: req.param('password'),
+
+console.log(hash);
+				// Load hash from your password DB.
+				try {
+				bcrypt.compare(req.param('password'), user.password, function(err, res) {
+				    // res == true
+						if(err) {
+							console.log(err)//res.negotiate(err);
+						}
+						else{
+							User.update({
+									id: user.id
+								}, {
+									deleted: false
+								}).exec(function(err, updatedUser) {
+									return res.json(updatedUser);
+								});
+						}//end else
+				});
+			}
+			catch(err){
+				console.log(err)
+			}
+
+
+			//}).exec({
+				// error: function(err) {
+				// 	return res.negotiate(err);
+				// },
+				//
+				// incorrect: function() {
+				// 	return res.notFound();
+				// },
+				// success: function() {
+				// 	User.update({
+				// 		id: user.id
+				// 	}, {
+				// 		deleted: false
+				// 	}).exec(function(err, updatedUser) {
+				// 		return res.json(updatedUser);
+				// 	});
+				// }
+			//});
+		});
+	}//end restoreProfile
+
+};//end UserController
