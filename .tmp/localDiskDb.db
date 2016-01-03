@@ -1,0 +1,84 @@
+{
+  "data": {
+    "video": [
+      {
+        "title": "jkj",
+        "src": "https://www.youtube.com/embed/",
+        "createdAt": "2015-12-30T22:45:50.396Z",
+        "updatedAt": "2015-12-30T22:45:50.396Z",
+        "id": 1
+      }
+    ],
+    "user": [
+      {
+        "email": "james.e.myrick@gmail.com",
+        "encryptedPassword": "$2a$10$N05iIlJMc7e7IloiOu2L9uOfL1OnoWswBKlS7MNScJ4awJgxutVK6",
+        "username": "james.e.myrick@gmail.com",
+        "deleted": false,
+        "admin": false,
+        "banned": false,
+        "createdAt": "2016-01-03T18:54:22.826Z",
+        "updatedAt": "2016-01-03T18:54:22.826Z",
+        "id": 25
+      }
+    ]
+  },
+  "schema": {
+    "video": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "email": {
+        "type": "string",
+        "unique": "true"
+      },
+      "username": {
+        "type": "string",
+        "unique": "true"
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "deleted": {
+        "type": "boolean"
+      },
+      "admin": {
+        "type": "boolean"
+      },
+      "banned": {
+        "type": "boolean"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 25
+    },
+    "video": {
+      "id": 1
+    }
+  }
+}
