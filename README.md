@@ -1,2 +1,3 @@
-# cp-web
-Test Environment for Cleverplacement
+#Cleverplacement Application
+
+a [Sails](http://sailsjs.org) application
