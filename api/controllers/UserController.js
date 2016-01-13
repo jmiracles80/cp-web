@@ -131,6 +131,7 @@ module.exports = {
         if (removedUser.length === 0) {
           return res.notFound();
         }
+				req.session.userId = null;
         return res.ok();
       });
     }, //end removeprofile
@@ -160,6 +161,8 @@ module.exports = {
               }, {
                 deleted: false
               }).exec(function(err, updatedUser) {
+
+								req.session.userId = user.id;
                 return res.json(updatedUser);
               });
             } //end else
@@ -210,6 +213,20 @@ module.exports = {
 
 
           },//end login
+				logout: function (req, res) {
+						if (!req.session.userId) return res.redirect('/');
 
+					User.findOne(req.session.userId, function foundUser(err, user) {
+						if (err) return res.negotiate(err);
+						if (!user) {
+
+							sails.log.verbose('Session refers to a user who no longer exists.');
+							return res.redirect('/');
+						}
+
+					req.session.userId = null;
+						return res.redirect('/');
+					});
+				},
 
         }; //end UserController

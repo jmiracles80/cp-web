@@ -93,7 +93,22 @@ module.exports.routes = {
       }
     }
   },
-  'PUT /login': 'UserController.login'
+  'GET /questionnaire': {
+    view: 'questionnaire',
+    locals: {
+      me: {
+        id: null
+      }
+    }
+  },
+  'GET /logout': 'UserController.logout',
+  'PUT /login': 'UserController.login',
+
+  /*************************************************************
+* Server Rendered HTML Pages
+*
+*************************************************************/
+'GET /': 'PageController.showHomePage',
 
 
 

@@ -18,8 +18,8 @@
         "deleted": false,
         "admin": false,
         "banned": false,
-        "createdAt": "2016-01-13T04:23:13.596Z",
-        "updatedAt": "2016-01-13T04:23:13.596Z"
+        "createdAt": "2016-01-13T05:57:58.393Z",
+        "updatedAt": "2016-01-13T05:57:58.393Z"
       }
     ]
   },
@@ -75,7 +75,7 @@
   },
   "counters": {
     "user": {
-      "id": 47
+      "id": 48
     },
     "video": {
       "id": 1

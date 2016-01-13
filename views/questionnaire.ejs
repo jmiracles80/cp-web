@@ -1,0 +1,28 @@
+<div ng-controller="questionnairesPageController" ng-cloak>
+  <!-- SUBMIT NEW questionnaire -->
+  <section ng-show="me.id" class="the-submit-questionnaire-form col-md-4">
+    <h3>See something missing?</h3>
+    <form ng-submit="submitNewquestionnaire()">
+      <input class="form-control" type="text" ng-model="newquestionnaireTitle" ng-disabled="busySubmittingquestionnaire" name="title" placeholder="e.g. My questionnaire title" />
+      <input class="form-control" type="text" ng-model="newquestionnaireSrc" ng-disabled="busySubmittingquestionnaire" name="src" placeholder="e.g. https://www.youtube.com/embed/Kdgt1ZHkvnM" />
+      <button class="btn btn-success" type="submit" ng-disabled="busySubmittingquestionnaire">
+        {{busySubmittingquestionnaire?'Submitting...':'Submit questionnaire'}}
+        <span ng-if="submitquestionnairesError">An error has occurred!</span>
+      </button>
+      <p class="error" ng-if="submitquestionnairesError">Please refresh the page and try again. If that doesn't work, call Chad!</p>
+    </form>
+  </section>
+
+  <!-- LIST OF questionnaireS -->
+  <section class="the-list-of-questionnaires col-md-12">
+    <div class="loading" ng-if="questionnairesLoading">Loading questionnaires...</div>
+    <div ng-if="!questionnairesLoading && questionnaires.length===0 && !submitquestionnairesError">There are no questionnaires, please add one!</div>
+    <ul>
+      <li class="questionnaire" ng-repeat="questionnaire in questionnaires" ng-if="!questionnairesLoading">
+        <h2>{{questionnaire.title}}</h2>
+        <iframe width="640" height="390" ng-src="{{questionnaire.src}}" frameborder="0" allowfullscreen>
+        </iframe>
+      </li>
+    </ul>
+  </section>
+</div>
