@@ -1,11 +1,11 @@
-angular.module('brushfire').controller('adminUsersPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
+angular.module('cleverplacement').controller('adminUsersPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
 
   // set-up loading state
   $scope.userList = {
     loading: false
   };
 
-  SCOPE=$scope;
+$scope.me = window.SAILS_LOCALS.me;
 
 
   $http.get('/user/adminUsers')
@@ -16,7 +16,6 @@ angular.module('brushfire').controller('adminUsersPageController', ['$scope', '$
 
   })
   .catch(function onError(sailsResponse){
-
     console.log(sailsResponse);
 
   })

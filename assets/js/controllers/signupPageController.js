@@ -1,4 +1,4 @@
-angular.module('brushfire').controller('signupPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
+angular.module('cleverplacement').controller('signupPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
 
   // set-up loading state
   $scope.signupForm = {
@@ -10,20 +10,23 @@ angular.module('brushfire').controller('signupPageController', ['$scope', '$http
     // Set the loading state (i.e. show loading spinner)
     $scope.signupForm.loading = true;
 
-    // // Submit a POST request to Sails. [The signup action has been created.]
-    // $http.post('/user/signup', {
-
     // Submit a POST request to /user [This is using blueprints.]
+    // $http.post('/user', {
+
+    // Submit a POST request to Sails. [The signup action has been created.]
     $http.post('/user/signup', {
       email: $scope.signupForm.email,
-      username: $scope.signupForm.username.trim(),
+      username: $scope.signupForm.username.replace(/\s+/g, '-'),
       password: $scope.signupForm.password
     })
     .then(function onSuccess(sailsResponse){
 
       // Redirect to the profile page [This is after we have a profile page built]
-      window.location = '#/profile/' + sailsResponse.data.id;
-
+      // window.location = '#/profile/' + sailsResponse.data.id;
+      window.location = '/profile';
+      
+      // Redirect to the user blueprint record [This is before we have the profile page built]
+      // window.location = '/user/' + sailsResponse.data.id;
     })
     .catch(function onError(sailsResponse){
 

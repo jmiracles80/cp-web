@@ -12,14 +12,14 @@
     "user": [
       {
         "email": "james@email.com",
-        "encryptedPassword": "$2a$10$1debh7eLyA7J6.JjPC/SFu9iwH22qz6rSW.PoBiI1PbmHwmnOK6PG",
+        "encryptedPassword": "abc123",
         "username": "james",
+        "id": 1,
         "deleted": false,
-        "admin": true,
+        "admin": false,
         "banned": false,
-        "createdAt": "2016-01-03T21:16:37.393Z",
-        "updatedAt": "2016-01-03T21:16:37.393Z",
-        "id": 34
+        "createdAt": "2016-01-13T04:23:13.596Z",
+        "updatedAt": "2016-01-13T04:23:13.596Z"
       }
     ]
   },
@@ -75,7 +75,7 @@
   },
   "counters": {
     "user": {
-      "id": 34
+      "id": 47
     },
     "video": {
       "id": 1

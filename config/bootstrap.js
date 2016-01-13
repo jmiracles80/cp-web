@@ -11,34 +11,37 @@
 
 module.exports.bootstrap = function(cb) {
 
-//CREATES admin user for testing
+
+
+          // return cb();
+         createTestUsers();
+
+
+
   function createTestUsers() {
 
-    var bcrypt = require('bcryptjs');
 
-      var hash = bcrypt.hashSync('abc123', 10);
 
-      var options = {};
+
+          var options = {};
+
 
 
           options.email = 'james@email.com';
-          options.encryptedPassword = hash;
+          options.encryptedPassword = "abc123";
           options.username = 'james';
+          options.id = 1;
           options.deleted = false;
-          options.admin = true;
+          options.admin = false;
           options.banned = false;
 
           User.create(options).exec(function(err, createdUser) {
             if (err) {
               return cb(err);
             }
-            console.log(createdUser);
-
             return cb();
           });
 
+        }
 
-}
-          return createTestUsers();
-
-};
+      }

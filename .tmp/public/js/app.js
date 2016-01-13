@@ -1,4 +1,4 @@
-// angular.module('brushfire', ['toastr', 'compareTo'])
+// angular.module('cleverplacement', ['toastr', 'compareTo'])
 //     .config(function($sceDelegateProvider) {
 //         $sceDelegateProvider.resourceUrlWhitelist([
 //             'self',
@@ -6,7 +6,7 @@
 //         ]);
 //     });
 
-angular.module('brushfire', ['ngRoute', 'toastr', 'compareTo'])
+angular.module('cleverplacement', ['ngRoute', 'toastr', 'compareTo'])
   .config(function($sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
       'self',

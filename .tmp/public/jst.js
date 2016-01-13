@@ -50,6 +50,16 @@ __p += '<!-- Error state -->\n<div class="alert alert-info toggle" ng-show="user
 return __p
 };
 
+this["JST"]["assets/templates/questionaire.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<!-- Error state -->\n<div class="alert alert-info toggle" ng-show="userProfile.errorMsg">\n  <h5>Oops!</h5>\n  <p>Looks like an error occurred.</p>\n  <code>\n  {{userProfile.errorMsg}}\n  </code>\n</div>\n<!-- Loading state -->\n<div ng-show="userProfile.loading">\n  <span class="overlord-loading-spinner fa fa-spinner"></span>\n  <span>Loading user data...</span>\n</div>\n<div ng-hide="userProfile.loading">\n  <div ng-hide="loading">\n    <div class="col-md-3">\n      <!--<img src={{userProfile.properties.gravatarURL}}/>--><p>image here?</p>\n    </div>\n  </div>\n</div>\n<div class="col-md-3" ng-hide="userProfile.noProfile">\n  <h1>{{userProfile.properties.username}}</h1>\n  <h3> <a href="mailto:{{userProfile.properties.email}}">{{userProfile.properties.email}}</a></h3>\n  <div>\n    <a href="#/profile/edit/{{userProfile.properties.id}}" class="btn btn-lg btn-primary">Edit</a>\n\n    <generate-Question></generate-Question>\n    <!-- Hard Delete -->\n     <!--<a ng-click="deleteProfile()" class="btn btn-lg btn-primary btn-danger">Delete</a>-->\n    <!-- Soft Delete -->\n    <!--<a ng-click="removeProfile()" class="btn btn-lg btn-primary btn-danger">Delete</a>-->\n  </div>\n</div>\n';
+
+}
+return __p
+};
+
 this["JST"]["assets/templates/restore.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;

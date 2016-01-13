@@ -1,4 +1,4 @@
-angular.module('brushfire').controller('restorePageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
+angular.module('cleverplacement').controller('restorePageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
 
   $scope.restoreForm = {
     loading: false,
@@ -19,7 +19,7 @@ angular.module('brushfire').controller('restorePageController', ['$scope', '$htt
     .then(function onSuccess(sailsResponse){
       console.log(sailsResponse);
 
-      window.location = '#/profile/' + sailsResponse.data[0].id;
+      window.location = '/profile';
     })
     .catch(function onError(sailsResponse) {
       console.log('sailsresponse: ', sailsResponse)
