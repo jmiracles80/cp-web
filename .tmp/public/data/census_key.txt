@@ -1,0 +1,185 @@
+tx-48
+http://api.census.gov/data/2014/acs1/profile/variables.html
+http://api.census.gov/data/2014/acs5/examples.html
+
+http://api.census.gov/data/2014/acs5/profile?get=DP02_0069M&for=state:48+county:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+
+
+Census API: Examples for /data/2014/acs5
+Geography Hierarchy	Example URL	Number
+160 examples
+us
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=us:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=us:1&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+region
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=region:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=region:1&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+division
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=division:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=division:1&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+state
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+state› county
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:195&in=state:02&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+state› county› county subdivision	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county+subdivision:*&in=state:36&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county+subdivision:01099&in=state:36+county:029&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+state› county› county subdivision› subminor civil division
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=subminor+civil+division:*&in=state:72+county:005+county+subdivision:00788&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=subminor+civil+division:81675&in=state:72+county:005+county+subdivision:00788&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+state› county› county subdivision› place remainder	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place+remainder:*&in=state:01+county:001+county+subdivision:92106&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place+remainder:60264&in=state:01+county:001+county+subdivision:92106&key=71fe614aef7259dc9968806aa209c28625dad0c9
+
+state› county› tract	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tract:*&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tract:000100&in=state:01+county:073&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› county› tract› block group	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=block+group:*&in=state:06+county:061&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=block+group:0&in=state:06+county:061+tract:990000&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› place› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:01+place:62328&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:001&in=state:01+place:62328&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› place	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place:00065&in=state:02&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› consolidated city	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=consolidated+city:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=consolidated+city:47500&in=state:09&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› consolidated city› place	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place:*&in=state:13+consolidated+city:03436&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place:03440&in=state:13+consolidated+city:03436&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› alaska native regional corporation	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=alaska+native+regional+corporation:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=alaska+native+regional+corporation:41640&in=state:02&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area/hawaiian+home+land:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area/hawaiian+home+land:0010&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal subdivision/remainder	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+subdivision/remainder:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+subdivision/remainder:600&in=american+indian+area/alaska+native+area/hawaiian+home+land:0605&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area (reservation or statistical entity only)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area+(reservation+or+statistical+entity+only):*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area+(reservation+or+statistical+entity+only):0155&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area (off-reservation trust land only)/hawaiian home land	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area+(off-reservation+trust+land+only)/hawaiian+home+land:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area+(off-reservation+trust+land+only)/hawaiian+home+land:0305&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal census tract	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+census+tract:*&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+census+tract:T00900&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal census tract› tribal block group	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+block+group:*&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020+tribal+census+tract:T00400&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+block+group:B&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020+tribal+census+tract:T00400&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=american+indian+area/alaska+native+area/hawaiian+home+land:6070&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:02&in=american+indian+area/alaska+native+area/hawaiian+home+land:6070&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› state› place/remainder	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place/remainder:*&in=american+indian+area/alaska+native+area/hawaiian+home+land:9550+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place/remainder:80376&in=american+indian+area/alaska+native+area/hawaiian+home+land:9550+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› state› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=american+indian+area/alaska+native+area/hawaiian+home+land:2865+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:053&in=american+indian+area/alaska+native+area/hawaiian+home+land:2865+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› american indian area/alaska native area/hawaiian home land	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area/hawaiian+home+land:*&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area/hawaiian+home+land:9820&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› american indian area/alaska native area (reservation or statistical entity only)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area+(reservation+or+statistical+entity+only):*&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area+(reservation+or+statistical+entity+only):9820&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› american indian area (off-reservation trust land only)/hawaiian home land	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area+(off-reservation+trust+land+only)/hawaiian+home+land:*&in=state:04&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area+(off-reservation+trust+land+only)/hawaiian+home+land:4200&in=state:04&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal subdivision/remainder› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=american+indian+area/alaska+native+area/hawaiian+home+land:1310+tribal+subdivision/remainder:700&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:04&in=american+indian+area/alaska+native+area/hawaiian+home+land:1310+tribal+subdivision/remainder:700&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal census tract (or part) within aia (reservation only)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+census+tract+(or+part)+within+aia+(reservation+only):*&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+census+tract+(or+part)+within+aia+(reservation+only):T00900&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal census tract (or part) within aia (trust land only)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+census+tract+(or+part)+within+aia+(trust+land+only):*&in=american+indian+area/alaska+native+area/hawaiian+home+land:0010&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+census+tract+(or+part)+within+aia+(trust+land+only):T00100&in=american+indian+area/alaska+native+area/hawaiian+home+land:0010&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal census tract› tribal block group (or part) within tribal census tract within aia (reservation only)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+block+group+(or+part)+within+tribal+census+tract+within+aia+(reservation+only):*&in=american+indian+area/alaska+native+area/hawaiian+home+land:0010+tribal+census+tract:T00100&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+block+group+(or+part)+within+tribal+census+tract+within+aia+(reservation+only):C&in=american+indian+area/alaska+native+area/hawaiian+home+land:0010+tribal+census+tract:T00100&key=71fe614aef7259dc9968806aa209c28625dad0c9
+american indian area/alaska native area/hawaiian home land› tribal census tract› tribal block group (or part) within tribal census tract within aia (trust land only)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+block+group+(or+part)+within+tribal+census+tract+within+aia+(trust+land+only):*&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020+tribal+census+tract:T00800&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=tribal+block+group+(or+part)+within+tribal+census+tract+within+aia+(trust+land+only):C&in=american+indian+area/alaska+native+area/hawaiian+home+land:0020+tribal+census+tract:T00800&key=71fe614aef7259dc9968806aa209c28625dad0c9
+metropolitan statistical area/micropolitan statistical area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+statistical+area/micropolitan+statistical+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+statistical+area/micropolitan+statistical+area:10100&key=71fe614aef7259dc9968806aa209c28625dad0c9
+metropolitan statistical area/micropolitan statistical area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=metropolitan+statistical+area/micropolitan+statistical+area:10700&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:01&in=metropolitan+statistical+area/micropolitan+statistical+area:10700&key=71fe614aef7259dc9968806aa209c28625dad0c9
+metropolitan statistical area/micropolitan statistical area› state› principal city	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=principal+city:*&in=metropolitan+statistical+area/micropolitan+statistical+area:11500+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=principal+city:57576&in=metropolitan+statistical+area/micropolitan+statistical+area:11500+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+metropolitan statistical area/micropolitan statistical area› metropolitan division	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+division:*&in=metropolitan+statistical+area/micropolitan+statistical+area:14460&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+division:40484&in=metropolitan+statistical+area/micropolitan+statistical+area:14460&key=71fe614aef7259dc9968806aa209c28625dad0c9
+metropolitan statistical area› metropolitan division› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=metropolitan+statistical+area:31080+metropolitan+division:31084&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:06&in=metropolitan+statistical+area:31080+metropolitan+division:31084&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› metropolitan statistical area/micropolitan statistical area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+statistical+area/micropolitan+statistical+area:*&in=state:46&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+statistical+area/micropolitan+statistical+area:10100&in=state:46&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› metropolitan statistical area/micropolitan statistical area› principal city (or part)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=principal+city+(or+part):*&in=state:01+metropolitan+statistical+area/micropolitan+statistical+area:11500&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=principal+city+(or+part):57576&in=state:01+metropolitan+statistical+area/micropolitan+statistical+area:11500&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› metropolitan statistical area/micropolitan statistical area› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:01+metropolitan+statistical+area/micropolitan+statistical+area:13820&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:009&in=state:01+metropolitan+statistical+area/micropolitan+statistical+area:13820&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› metropolitan statistical area/micropolitan statistical area› metropolitan division	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+division:*&in=state:06+metropolitan+statistical+area/micropolitan+statistical+area:41860&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+division:42034&in=state:06+metropolitan+statistical+area/micropolitan+statistical+area:41860&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› metropolitan statistical area/micropolitan statistical area› metropolitan division› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:06+metropolitan+statistical+area/micropolitan+statistical+area:41860+metropolitan+division:36084&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:001&in=state:06+metropolitan+statistical+area/micropolitan+statistical+area:41860+metropolitan+division:36084&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined statistical area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+statistical+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+statistical+area:104&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined statistical area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=combined+statistical+area:308&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:05&in=combined+statistical+area:308&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined statistical area› micropolitan statistical area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=micropolitan+statistical+area:*&in=combined+statistical+area:364&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=micropolitan+statistical+area:41900&in=combined+statistical+area:364&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined statistical area› metropolitan statistical area/micropolitan statistical area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=combined+statistical+area:142+metropolitan+statistical+area/micropolitan+statistical+area:45180&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:01&in=combined+statistical+area:142+metropolitan+statistical+area/micropolitan+statistical+area:45180&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined new england city and town area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+new+england+city+and+town+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+new+england+city+and+town+area:775&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined new england city and town area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=combined+new+england+city+and+town+area:715&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:09&in=combined+new+england+city+and+town+area:715&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined new england city and town area› new england city and town area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:*&in=combined+new+england+city+and+town+area:710&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:78850&in=combined+new+england+city+and+town+area:710&key=71fe614aef7259dc9968806aa209c28625dad0c9
+combined new england city and town area› new england city and town area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=combined+new+england+city+and+town+area:720+new+england+city+and+town+area:78700&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:09&in=combined+new+england+city+and+town+area:720+new+england+city+and+town+area:78700&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› combined statistical area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+statistical+area:*&in=state:41&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+statistical+area:140&in=state:41&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› combined statistical area› metropolitan statistical area/micropolitan statistical area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+statistical+area/micropolitan+statistical+area:*&in=state:01+combined+statistical+area:142&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=metropolitan+statistical+area/micropolitan+statistical+area:45180&in=state:01+combined+statistical+area:142&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› combined new england city and town area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+new+england+city+and+town+area:*&in=state:09&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=combined+new+england+city+and+town+area:715&in=state:09&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› combined new england city and town area› new england city and town area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:*&in=state:09+combined+new+england+city+and+town+area:720&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:78700&in=state:09+combined+new+england+city+and+town+area:720&key=71fe614aef7259dc9968806aa209c28625dad0c9
+new england city and town area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:70450&key=71fe614aef7259dc9968806aa209c28625dad0c9
+new england city and town area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=new+england+city+and+town+area:71950&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:09&in=new+england+city+and+town+area:71950&key=71fe614aef7259dc9968806aa209c28625dad0c9
+new england city and town area› necta division	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=necta+division:*&in=new+england+city+and+town+area:71650&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=necta+division:74204&in=new+england+city+and+town+area:71650&key=71fe614aef7259dc9968806aa209c28625dad0c9
+new england city and town area› necta division› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=new+england+city+and+town+area:71650+necta+division:71654&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:25&in=new+england+city+and+town+area:71650+necta+division:71654&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:*&in=state:09&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=new+england+city+and+town+area:76450&in=state:09&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area› place	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place:*&in=state:09+new+england+city+and+town+area:71950&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=place:74260&in=state:09+new+england+city+and+town+area:71950&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:09+new+england+city+and+town+area:71950&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:001&in=state:09+new+england+city+and+town+area:71950&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area› county› county subdivision	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county+subdivision:*&in=state:09+new+england+city+and+town+area:71950+county:001&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county+subdivision:33620&in=state:09+new+england+city+and+town+area:71950+county:001&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area› necta division	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=necta+division:*&in=state:25+new+england+city+and+town+area:71650&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=necta+division:74204&in=state:25+new+england+city+and+town+area:71650&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area› necta division› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:25+new+england+city+and+town+area:71650+necta+division:73604&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:009&in=state:25+new+england+city+and+town+area:71650+necta+division:73604&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› new england city and town area› necta division› county› county subdivision	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county+subdivision:*&in=state:25+new+england+city+and+town+area:71650+necta+division:71654+county:009&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county+subdivision:07420&in=state:25+new+england+city+and+town+area:71650+necta+division:71654+county:009&key=71fe614aef7259dc9968806aa209c28625dad0c9
+urban area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=urban+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=urban+area:00037&key=71fe614aef7259dc9968806aa209c28625dad0c9
+urban area› state	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:*&in=urban+area:02791&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state:01&in=urban+area:02791&key=71fe614aef7259dc9968806aa209c28625dad0c9
+urban area› state› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=urban+area:68482+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:003&in=urban+area:68482+state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› congressional district	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=congressional+district:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=congressional+district:00&in=state:56&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› congressional district› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:01+congressional+district:06&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:007&in=state:01+congressional+district:06&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› congressional district› american indian area/alaska native area/hawaiian home land	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area/hawaiian+home+land:*&in=state:01+congressional+district:02&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=american+indian+area/alaska+native+area/hawaiian+home+land:9550&in=state:01+congressional+district:02&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› state legislative district (upper chamber)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state+legislative+district+(upper+chamber):*&in=state:12&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state+legislative+district+(upper+chamber):001&in=state:12&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› state legislative district (upper chamber)› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:01+state+legislative+district+(upper+chamber):030&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:001&in=state:01+state+legislative+district+(upper+chamber):030&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› state legislative district (lower chamber)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state+legislative+district+(lower+chamber):*&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=state+legislative+district+(lower+chamber):001&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› state legislative district (lower chamber)› county	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:*&in=state:01+state+legislative+district+(lower+chamber):096&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=county:003&in=state:01+state+legislative+district+(lower+chamber):096&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› public use microdata area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=public+use+microdata+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=public+use+microdata+area:00100&in=state:36&key=71fe614aef7259dc9968806aa209c28625dad0c9
+zip code tabulation area	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=zip+code+tabulation+area:*&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=zip+code+tabulation+area:00610&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› school district (elementary)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=school+district+(elementary):*&in=state:50&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=school+district+(elementary):00001&in=state:50&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› school district (secondary)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=school+district+(secondary):*&in=state:50&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=school+district+(secondary):00002&in=state:50&key=71fe614aef7259dc9968806aa209c28625dad0c9
+state› school district (unified)	http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=school+district+(unified):*&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9
+http://api.census.gov/data/2014/acs5?get=NAME,B01001_001E&for=school+district+(unified):00001&in=state:01&key=71fe614aef7259dc9968806aa209c28625dad0c9

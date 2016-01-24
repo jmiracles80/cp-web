@@ -7,8 +7,8 @@
 
 module.exports = {
 
-connection: 'localDiskDb',//'somePostgresqlServer',
-
+//connection: 'localDiskDb',//'somePostgresqlServer',
+  connection: 'mongodb',
   schema: true,
 
   //*****ONLY FOR TEST ENV.********

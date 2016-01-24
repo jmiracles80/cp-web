@@ -29,11 +29,10 @@ module.exports = {
               me: {
                 id: user.id,
                 email: user.email,
-                gravatarURL: user.gravatarURL,
                 admin: user.admin
               }
             });
           });
-      
+
       }
     };
