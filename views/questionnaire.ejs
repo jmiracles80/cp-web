@@ -1,6 +1,6 @@
 <!-- <div ng-controller="questionnairesPageController" ng-cloak> -->
-  <!-- SUBMIT NEW questionnaire -->
-  <!-- <section ng-show="me.id" class="the-submit-questionnaire-form col-md-4">
+<!-- SUBMIT NEW questionnaire -->
+<!-- <section ng-show="me.id" class="the-submit-questionnaire-form col-md-4">
     <h3>See something missing?</h3>
     <form ng-submit="submitNewquestionnaire()">
       <input class="form-control" type="text" ng-model="newquestionnaireTitle" ng-disabled="busySubmittingquestionnaire" name="title" placeholder="e.g. My questionnaire title" />
@@ -13,13 +13,20 @@
     </form>
   </section> -->
 
-<div>
+<!-- <div>
   <%- partial('./partials/map.ejs') %>
+</div> -->
+<div ng-app="formApp">
+  <!-- views will be injected here -->
+  <div class="container">
+
+    <div ui-view></div>
+
+  </div>
+
 </div>
-
-
-  <!-- LIST OF questionnaireS -->
-  <!-- <section class="the-list-of-questionnaires col-md-12">
+<!-- LIST OF questionnaireS -->
+<!-- <section class="the-list-of-questionnaires col-md-12">
     <div class="loading" ng-if="questionnairesLoading">Loading questionnaires...</div>
     <div ng-if="!questionnairesLoading && questionnaires.length===0 && !submitquestionnairesError">There are no questionnaires, please add one!</div>
     <ul>

@@ -30,6 +30,16 @@ __p += '<!-- Error state -->\n<div class="alert alert-info toggle" ng-show="edit
 return __p
 };
 
+this["JST"]["assets/templates/form-interests.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<label>What\'s Your Console of Choice?</label>\n<div class="form-group">\n  <div class="radio">\n    <label>\n      <input type="radio" ng-model="formData.type" value="xbox" checked> I like XBOX\n    </label>\n  </div>\n  <div class="radio">\n    <label>\n      <input type="radio" ng-model="formData.type" value="ps"> I like PS4\n    </label>\n  </div>\n</div>\n\n<div class="form-group row">\n  <div class="col-xs-6 col-xs-offset-3">\n    <a ui-sref="form.payment" class="btn btn-block btn-info">\n    Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>\n    </a>\n  </div>\n</div>\n';
+
+}
+return __p
+};
+
 this["JST"]["assets/templates/home.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;

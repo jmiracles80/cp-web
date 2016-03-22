@@ -1,49 +1,52 @@
-angular.module('cleverplacement').controller('signupPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
+angular.module('cleverplacement').controller('signupPageController', ['$scope', '$http', 'toastr',
 
-  // set-up loading state
-  $scope.signupForm = {
-    loading: false
-  };
+    function($scope, $http, toastr) {
 
-  $scope.submitSignupForm = function(){
+      // set-up loading state
+      $scope.signupForm = {
+        loading: false
+      };
 
-    // Set the loading state (i.e. show loading spinner)
-    $scope.signupForm.loading = true;
+      $scope.submitSignupForm = function() {
 
-    // Submit a POST request to /user [This is using blueprints.]
-    // $http.post('/user', {
+        // Set the loading state (i.e. show loading spinner)
+        $scope.signupForm.loading = true;
 
-    // Submit a POST request to Sails. [The signup action has been created.]
-    $http.post('/user/signup', {
-      email: $scope.signupForm.email,
-      username: $scope.signupForm.username.replace(/\s+/g, '-'),
-      password: $scope.signupForm.password
-    })
-    .then(function onSuccess(sailsResponse){
+        // Submit a POST request to /user [This is using blueprints.]
+        // $http.post('/user', {
 
-      // Redirect to the profile page [This is after we have a profile page built]
-      // window.location = '#/profile/' + sailsResponse.data.id;
-      window.location = '/profile';
-      
-      // Redirect to the user blueprint record [This is before we have the profile page built]
-      // window.location = '/user/' + sailsResponse.data.id;
-    })
-    .catch(function onError(sailsResponse){
+        // Submit a POST request to Sails. [The signup action has been created.]
+        $http.post('/user/signup', {
+            email: $scope.signupForm.email,
+            username: $scope.signupForm.username.replace(/\s+/g, '-'),
+            password: $scope.signupForm.password
+          })
+          .then(function onSuccess(sailsResponse) {
 
-    // Handle known error type(s).
-    if (sailsResponse.status == 409) {
-      toastr.error(sailsResponse.data);
-      $scope.signupForm.errorMsg = 'An unexpected error occurred: ' + (sailsResponse.data || sailsResponse.status);
-      return;
+            // Redirect to the profile page [This is after we have a profile page built]
+            // window.location = '#/profile/' + sailsResponse.data.id;
+            window.location = '/profile';
+
+            // Redirect to the user blueprint record [This is before we have the profile page built]
+            // window.location = '/user/' + sailsResponse.data.id;
+          })
+          .catch(function onError(sailsResponse) {
+
+            // Handle known error type(s).
+            if (sailsResponse.status == 409) {
+              toastr.error(sailsResponse.data);
+              $scope.signupForm.errorMsg = 'An unexpected error occurred: ' + (sailsResponse.data || sailsResponse.status);
+              return;
+            }
+
+            // Handle unknown error type(s).
+            $scope.signupForm.errorMsg = 'An unexpected error occurred: ' + (sailsResponse.data || sailsResponse.status);
+
+          })
+          .finally(function eitherWay() {
+            $scope.signupForm.loading = false;
+          });
+      };
+
     }
-
-    // Handle unknown error type(s).
-    $scope.signupForm.errorMsg = 'An unexpected error occurred: ' + (sailsResponse.data || sailsResponse.status);
-
-    })
-    .finally(function eitherWay(){
-      $scope.signupForm.loading = false;
-    });
-  };
-
-}]);
+  ]);

@@ -16,12 +16,14 @@ angular.module('cleverplacement').controller('navPageController', ['$location', 
         username: $scope.loginForm.login,
         password: $scope.loginForm.password
       })
+      
       .then(function onSuccess() {
         // Redierct the page now that we've been logged in.
         // window.location = '/videos';
         // window.location = '/';
         toastr.success('We have a match!', 'Success', {closeButton: true});
       })
+
       .catch(function onError(sailsResponse) {
 
         // Handle known error type(s).
@@ -53,5 +55,7 @@ angular.module('cleverplacement').controller('navPageController', ['$location', 
       .finally(function eitherWay() {
         $scope.loginForm.loading = false;
       });
-  };
+  };//end submitLoginForm
+
+
 }]);

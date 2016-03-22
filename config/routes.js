@@ -32,14 +32,7 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 
-  'GET /': {
-    view: 'homepage',
-    locals: {
-      me: {
-          id: null
-      }
-    }
-  },
+  'GET /':  'PageController.showHomePage',
 
   'GET /profile': {
     view: 'profile',
@@ -83,21 +76,36 @@ module.exports.routes = {
       }
     }
   },
-  'GET /administration': {
-    view: 'adminUsers',
-    locals: {
-      me: {
-        // id: 1,
-        // gravatarURL: 'http://www.gravatar.com/avatar/ef3eac6c71fdf24b13db12d8ff8d1264?',
-        // email: 'sailsinaction@gmail.com',
-      }
-    }
-  },
+  'GET /administration': 'PageController.showAdminPage',
   'GET /questionnaire': {
     view: 'questionnaire',
     locals: {
       me: {
+      //  id: null
+      }
+    }
+  },
+  'GET /zipcode': {
+    view: 'partials/zipcode',
+    locals: {
+      me: {
         id: null
+      }
+    }
+  },
+  'GET /census': {
+    view: 'census',
+    locals: {
+      me: {
+        id:null
+      }
+    }
+  },
+  'GET /explore': {
+    view: 'explore',
+    locals: {
+      me: {
+        id:null
       }
     }
   },
@@ -109,6 +117,8 @@ module.exports.routes = {
 *
 *************************************************************/
 'GET /': 'PageController.showHomePage',
+
+
 
 
 
