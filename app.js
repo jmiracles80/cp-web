@@ -38,7 +38,7 @@ process.chdir(__dirname);
   }
 
   // Try to get `rc` dependency
-  var rc;
+  //var rc;
   try {
     rc = require('rc');
   } catch (e0) {
